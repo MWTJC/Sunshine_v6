@@ -163,7 +163,8 @@ namespace net {
     }
   }
 
-  host_t host_create(af_e af, ENetAddress &addr, std::size_t peers, std::uint16_t port) {
+  host_t
+  host_create(af_e af, ENetAddress &addr, std::size_t peers, std::uint16_t port) {
     auto any_addr = net::af_to_any_address_string(af);
     enet_address_set_host(&addr, any_addr.data());
     enet_address_set_port(&addr, port);
