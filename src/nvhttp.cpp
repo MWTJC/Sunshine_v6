@@ -618,7 +618,7 @@ namespace nvhttp {
     tree.put("root.uniqueid", http::unique_id);
     tree.put("root.HttpsPort", map_port(PORT_HTTPS));
     tree.put("root.ExternalPort", map_port(PORT_HTTP));
-    tree.put("root.mac", platf::get_mac_address(net::addr_to_normalized_string(local_endpoint.address()));
+    tree.put("root.mac", platf::get_mac_address(net::addr_to_normalized_string(local_endpoint.address())));
     tree.put("root.MaxLumaPixelsHEVC", video::active_hevc_mode > 1 ? "1869449984" : "0");
     tree.put("root.LocalIP", net::addr_to_normalized_string(local_endpoint.address());
 
