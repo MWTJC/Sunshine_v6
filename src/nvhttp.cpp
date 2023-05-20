@@ -620,7 +620,7 @@ namespace nvhttp {
     tree.put("root.ExternalPort", map_port(PORT_HTTP));
     tree.put("root.mac", platf::get_mac_address(net::addr_to_normalized_string(local_endpoint.address())));
     tree.put("root.MaxLumaPixelsHEVC", video::active_hevc_mode > 1 ? "1869449984" : "0");
-    tree.put("root.LocalIP", net::addr_to_normalized_string(local_endpoint.address());
+    tree.put("root.LocalIP", net::addr_to_normalized_string(local_endpoint.address()));
 
     if (video::active_hevc_mode == 3) {
       tree.put("root.ServerCodecModeSupport", "3843");
