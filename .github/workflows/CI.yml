@@ -230,17 +230,5 @@ jobs:
           name: sunshine-windows
           path: artifacts/
 
-      - name: Create/Update GitHub Release
-        if: ${{ needs.setup_release.outputs.create_release == 'true' }}
-        uses: ncipollo/release-action@v1
-        with:
-          name: ${{ needs.setup_release.outputs.release_name }}
-          tag: ${{ needs.setup_release.outputs.release_tag }}
-          commit: ${{ needs.setup_release.outputs.release_commit }}
-          artifacts: "*artifacts/*"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          allowUpdates: true
-          body: ${{ needs.setup_release.outputs.release_body }}
-          discussionCategory: announcements
-          prerelease: ${{ needs.setup_release.outputs.pre_release }}
+ 
 
