@@ -1307,7 +1307,7 @@ namespace stream {
     auto address_family = net::af_from_enum_string(config::sunshine.address_family);
     auto protocol = address_family == net::IPV4 ? udp::v4() : udp::v6();
     auto control_port = map_port(CONTROL_PORT);
-    auto video_por = map_port(VIDEO_STREAM_PORT);
+    auto video_port = map_port(VIDEO_STREAM_PORT);
     auto audio_port = map_port(AUDIO_STREAM_PORT);
 
     if (ctx.control_server.bind(address_family, control_port)) {
