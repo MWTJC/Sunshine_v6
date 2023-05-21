@@ -776,7 +776,7 @@ namespace nvhttp {
     rtsp_stream::launch_session_raise(make_launch_session(host_audio, args));
 
     tree.put("root.<xmlattr>.status_code", 200);
-    tree.put("root.sessionUrl0", "rtsp://"s + "rtsp://"s + net::addr_to_url_escaped_string(request->local_endpoint().address()) + ':' + std::to_string(map_port(rtsp_stream::RTSP_SETUP_PORT)));  // stream:: to rtsp_stream::
+    tree.put("root.sessionUrl0", "rtsp://"s + net::addr_to_url_escaped_string(request->local_endpoint().address()) + ':' + std::to_string(map_port(rtsp_stream::RTSP_SETUP_PORT)));  // stream:: to rtsp_stream::
     tree.put("root.gamesession", 1);
   }
 
